@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Multimodal Live API | Tech-Noir Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@500;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'noir-bg': '#050505',
+                        'noir-card': '#0d0d0d',
+                        'noir-accent': '#00f2ff', // Electric Cyan
+                        'noir-accent-dim': 'rgba(0, 242, 255, 0.1)',
+                        'noir-text': '#e0e0e0',
+                        'noir-muted': '#888888',
+                        'noir-border': '#1a1a1a',
+                        'noir-highlight': '#151b23',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050505;
+            color: #e0e0e0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Glassmorphism & Effects */
+        .glass-panel {
+            background: rgba(13, 13, 13, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+        }
+
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 242, 255, 0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            pointer-events: none;
+            animation: scanline 8s linear infinite;
+        }
+
+        @keyframes scanline {
+            0% { transform: translateY(-100vh); }
+            100% { transform: translateY(100vh); }
+        }
+
+        /* Markdown Styling Overrides */
+        .markdown-body h1 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            border-bottom: 1px solid #1a1a1a;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 2.25rem;
+        }
+
+        .markdown-body h2 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            color: #ffffff;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .markdown-body h2::before {
+            content: "//";
+            color: #00f2ff;
+            margin-right: 0.75rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        .markdown-body h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            color: #00f2ff;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.25rem;
+            color: #b0b0b0;
+        }
+
+        .markdown-body ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #b0b0b0;
+        }
+
+        .markdown-body ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #00f2ff;
+        }
+
+        .markdown-body ol {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #b0b0b0;
+        }
+
+        .markdown-body code:not(pre code) {
+            background: #1a1a1a;
+            color: #00f2ff;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .markdown-body pre {
+            background: #0d0d0d;
+            border: 1px solid #1a1a1a;
+            padding: 1.25rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            position: relative;
+        }
+
+        .markdown-body pre::after {
+            content: "CODE_OUTPUT";
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            color: #333;
+            padding: 4px 8px;
+        }
+
+        .markdown-body pre code {
+            font-family: 'JetBrains Mono', monospace;
+            color: #d1d1d1;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .markdown-body a {
+            color: #00f2ff;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .markdown-body a:hover {
+            border-bottom: 1px solid #00f2ff;
+            text-shadow: 0 0 8px rgba(0, 242, 255, 0.5);
+        }
+
+        .markdown-body strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .markdown-body blockquote {
+            border-left: 3px solid #00f2ff;
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #888;
+        }
+
+        /* Animation for appearance */
+        .fade-in {
+            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Gradient background highlight */
+        .radial-glow {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at 50% -20%, rgba(0, 242, 255, 0.07) 0%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #00f2ff;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            box-shadow: 0 0 10px #00f2ff;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="selection:bg-noir-accent selection:text-noir-bg">
+
+    <div class="scanline"></div>
+    <div class="radial-glow"></div>
+
+    <main class="max-w-4xl mx-auto px-6 py-20 fade-in">
+        
+        <!-- Header Info (Repository Feel) -->
+        <div class="flex flex-wrap items-center justify-between mb-12 pb-6 border-b border-noir-border text-xs font-mono uppercase tracking-widest text-noir-muted">
+            <div class="flex items-center space-x-4 mb-4 sm:mb-0">
+                <span class="flex items-center"><span class="status-dot"></span> LIVE_CONNECTION</span>
+                <span>v2.0.26_STABLE</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="https://opal.google/app/1eoHAclzyRIEBiPjXSxIs46l4dyDssYFc" target="_blank" class="flex items-center hover:text-noir-accent transition-colors">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.412-4.041-1.412-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    REPOSITORY
+                </a>
+                <span>STRICT_MODE: ON</span>
+            </div>
+        </div>
+
+        <!-- Main Markdown Content -->
+        <article class="markdown-body">
+            <h1 id="title">Gemini Multimodal Live API: Web Console</h1>
+
+            <div class="mb-12 p-6 rounded-lg glass-panel border-l-4 border-noir-accent">
+                <h2 class="mt-0" style="margin-top:0 !important">System Overview</h2>
+                <p>A low-latency, bidirectional interface for real-time multimodal interaction. Built for precision. Engineered for the 2026 web.</p>
+                <p>This console bridges the gap between raw compute and human intent, utilizing the Gemini Multimodal Live API to orchestrate audio, video, and screen-sharing streams with sub-millisecond precision.</p>
+            </div>
+
+            <h2 id="tech-foundation">Technical Foundation</h2>
+            <ul>
+                <li><strong>Core</strong>: React + TypeScript (Strict Mode)</li>
+                <li><strong>Engine</strong>: Vite (Optimized Asset Pipeline)</li>
+                <li><strong>Protocol</strong>: Bidirectional WebSockets (Bidi)</li>
+                <li><strong>Media</strong>: Web Audio API (PCM 16kHz), MediaDevices, Offscreen Frame Extraction</li>
+            </ul>
+
+            <h2 id="benchmarks">Performance Benchmarks: 2026 Standards</h2>
+            <p>The architecture is designed to exceed projected 2026 Core Web Vitals targets for high-performance immersive applications:</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+                <div class="p-4 border border-noir-border rounded bg-noir-highlight hover:border-noir-accent transition-colors cursor-default group">
+                    <span class="text-xs font-mono text-noir-accent mb-1 block group-hover:glow-text">METRIC_INP</span>
+                    <div class="text-xl font-display font-bold text-white mb-2">&lt; 150ms</div>
+                    <p class="text-xs text-noir-muted leading-relaxed">High-frequency WebSocket traffic and media encoding must not exceed 50ms long-task thresholds.</p>
+                </div>
+                <div class="p-4 border border-noir-border rounded bg-noir-highlight hover:border-noir-accent transition-colors cursor-default group">
+                    <span class="text-xs font-mono text-noir-accent mb-1 block group-hover:glow-text">METRIC_LCP</span>
+                    <div class="text-xl font-display font-bold text-white mb-2">&lt; 1.8s</div>
+                    <p class="text-xs text-noir-muted leading-relaxed">Hero UI elements must render prior to full WebSocket handshake completion.</p>
+                </div>
+            </div>
+
+            <p><strong>Visual Stability</strong>: CLS &lt; 0.05.</p>
+
+            <h2 id="bottlenecks">Technical Bottleneck Analysis</h2>
+            <ol>
+                <li><strong>Main-Thread Serialization</strong>: Current JPEG encoding and frame extraction via the Canvas API compete with the UI thread for resources, risking INP spikes during high-motion video capture.</li>
+                <li><strong>Context Consistency Overheads</strong>: Centralized React Context for WebSocket message dispatching causes unnecessary reconciliation across the component tree during high-frequency audio/log updates.</li>
+                <li><strong>Initialization Waterfall</strong>: The dependency on the full client-side JS bundle and WebSocket handshake delays the LCP of the primary interaction viewport.</li>
+            </ol>
+
+            <h2 id="evolution">Architectural Evolution</h2>
+            <p>To sustain elite performance in the 2026 landscape, the following evolutions are mandated:</p>
+
+            <h3>I. Worker-Isolated Media Pipeline</h3>
+            <p>Offload all frame extraction, resizing, and base64/JPEG encoding to a dedicated <strong>Web Worker</strong> utilizing <code>OffscreenCanvas</code>. By decoupling media compression from the UI thread, the main thread remains silent and receptive, ensuring INP remains below the 150ms threshold regardless of input complexity.</p>
+
+            <h3>II. Atomic State Distribution</h3>
+            <p>Transition high-frequency telemetry (signal meters, audio visualizers, logger updates) from React Context to <strong>Atomic State (Signals)</strong>. This granular update mechanism bypasses the standard React reconciliation tree, allowing specific UI nodes to react to WebSocket packets in O(1) time without triggering global re-renders.</p>
+
+            <h3>III. Edge-Assisted Hydration</h3>
+            <p>Implement <strong>Streaming Server-Side Rendering (SSR)</strong> coupled with <strong>Edge pre-connection</strong>. Use Edge Functions to trigger the initial API handshake during the TTFB window. This allows the LCP hero element—the video preview shell—to render immediately, with the live stream "filling" the container as soon as the client-side hydration completes.</p>
+
+            <h2 id="operation">Operation</h2>
+            <pre><code><span class="text-noir-muted"># 1. Clone repository</span>
+git clone [repository-url]
+
+<span class="text-noir-muted"># 2. Initialize environment</span>
+npm install
+
+<span class="text-noir-muted"># 3. Configure credentials</span>
+echo "VITE_GEMINI_API_KEY=your_key_here" > .env
+
+<span class="text-noir-muted"># 4. Execute dev server</span>
+npm run dev</code></pre>
+
+            <div class="mt-12 pt-8 border-t border-noir-border flex justify-between items-center opacity-50 font-mono text-[10px] uppercase tracking-widest">
+                <span>End of Transmission</span>
+                <div class="flex space-x-4">
+                    <span>Logically Sound</span>
+                    <span class="text-noir-accent">Latency-Minimized</span>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        // Subtle interaction: Highlight text based on cursor position for that "scan" feel
+        document.addEventListener('mousemove', (e) => {
+            const glow = document.querySelector('.radial-glow');
+            const x = (e.clientX / window.innerWidth) * 100;
+            const y = (e.clientY / window.innerHeight) * 100;
+            glow.style.background = `radial-gradient(circle at ${x}% ${y}%, rgba(0, 242, 255, 0.05) 0%, transparent 50%)`;
+        });
+
+        // Console log for that extra tech flavor
+        console.log("%c GEMINI LIVE SYSTEM INITIALIZED ", "background: #00f2ff; color: #050505; font-weight: bold; padding: 4px; border-radius: 2px;");
+        console.log("%c Status: Nominal | Sync: 0.2ms ", "color: #00f2ff; font-family: monospace;");
+    </script>
+</body>
+</html>
+

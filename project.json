@@ -1,0 +1,532 @@
+{
+  "metadata": {
+    "visual": {
+      "presentation": {
+        "themes": {
+          "c8cab659-672b-46b9-b934-fadb739ff310": {
+            "template": "basic",
+            "templateAdditionalOptions": {},
+            "palette": {
+              "primary": {
+                "0": "#000000",
+                "5": "#00131a",
+                "10": "#001f28",
+                "15": "#002a35",
+                "20": "#003543",
+                "25": "#004151",
+                "30": "#004e60",
+                "35": "#005a6f",
+                "40": "#00677f",
+                "50": "#00829f",
+                "60": "#009ec0",
+                "70": "#36b9dd",
+                "80": "#5bd5fa",
+                "90": "#b5ebff",
+                "95": "#dcf5ff",
+                "98": "#f2fbff",
+                "99": "#f9fdff",
+                "100": "#ffffff"
+              },
+              "secondary": {
+                "0": "#000000",
+                "5": "#00131a",
+                "10": "#071e26",
+                "15": "#122930",
+                "20": "#1e333b",
+                "25": "#293f46",
+                "30": "#344a52",
+                "35": "#40565e",
+                "40": "#4c626a",
+                "50": "#647b83",
+                "60": "#7e949d",
+                "70": "#98afb8",
+                "80": "#b3cad4",
+                "90": "#cfe6f0",
+                "95": "#ddf5ff",
+                "98": "#f2fbff",
+                "99": "#f9fdff",
+                "100": "#ffffff"
+              },
+              "tertiary": "",
+              "error": {
+                "0": "#000000",
+                "5": "#2d0001",
+                "10": "#410002",
+                "15": "#540003",
+                "20": "#690005",
+                "25": "#7e0007",
+                "30": "#93000a",
+                "35": "#a80710",
+                "40": "#ba1a1a",
+                "50": "#de3730",
+                "60": "#ff5449",
+                "70": "#ff897d",
+                "80": "#ffb4ab",
+                "90": "#ffdad6",
+                "95": "#ffedea",
+                "98": "#fff8f7",
+                "99": "#fffbff",
+                "100": "#ffffff"
+              },
+              "neutral": {
+                "0": "#000000",
+                "5": "#0e1113",
+                "10": "#191c1d",
+                "15": "#232628",
+                "20": "#2e3132",
+                "25": "#393c3d",
+                "30": "#444749",
+                "35": "#505354",
+                "40": "#5c5f60",
+                "50": "#757779",
+                "60": "#8f9192",
+                "70": "#a9abad",
+                "80": "#c5c7c8",
+                "90": "#e1e3e4",
+                "95": "#eff1f2",
+                "98": "#f8f9fb",
+                "99": "#fbfcfe",
+                "100": "#ffffff"
+              },
+              "neutralVariant": {
+                "0": "#000000",
+                "5": "#0a1215",
+                "10": "#151d20",
+                "15": "#1f272a",
+                "20": "#293235",
+                "25": "#343d40",
+                "30": "#40484c",
+                "35": "#4b5457",
+                "40": "#576063",
+                "50": "#70787c",
+                "60": "#8a9296",
+                "70": "#a4adb1",
+                "80": "#bfc8cc",
+                "90": "#dbe4e8",
+                "95": "#eaf2f6",
+                "98": "#f2fbff",
+                "99": "#f9fdff",
+                "100": "#ffffff"
+              }
+            },
+            "themeColors": {
+              "primaryColor": "",
+              "secondaryColor": "",
+              "backgroundColor": "",
+              "primaryTextColor": "",
+              "textColor": ""
+            },
+            "splashScreen": {
+              "storedData": {
+                "handle": "drive:/1SBc6EaLp7Bkp5pqGAdGN295-6MIKwS9f",
+                "mimeType": "image/png",
+                "contentLength": 1454112
+              }
+            }
+          },
+          "8d93d271-f6ed-4be4-b007-be921a06438d": {
+            "template": "basic",
+            "templateAdditionalOptions": {},
+            "palette": {
+              "primary": {
+                "0": "#000000",
+                "5": "#00112a",
+                "10": "#001b3d",
+                "15": "#002550",
+                "20": "#003063",
+                "25": "#003a77",
+                "30": "#00468c",
+                "35": "#17529a",
+                "40": "#295ea7",
+                "50": "#4677c2",
+                "60": "#6291de",
+                "70": "#7dacfa",
+                "80": "#a9c7ff",
+                "90": "#d6e3ff",
+                "95": "#ecf0ff",
+                "98": "#f9f9ff",
+                "99": "#fdfbff",
+                "100": "#ffffff"
+              },
+              "secondary": {
+                "0": "#000000",
+                "5": "#081120",
+                "10": "#131c2b",
+                "15": "#1d2636",
+                "20": "#283141",
+                "25": "#333c4d",
+                "30": "#3e4759",
+                "35": "#4a5365",
+                "40": "#565f71",
+                "50": "#6e778a",
+                "60": "#8891a5",
+                "70": "#a2abc0",
+                "80": "#bec7dc",
+                "90": "#dae2f9",
+                "95": "#ecf0ff",
+                "98": "#f9f9ff",
+                "99": "#fdfbff",
+                "100": "#ffffff"
+              },
+              "tertiary": "",
+              "error": {
+                "0": "#000000",
+                "5": "#2d0001",
+                "10": "#410002",
+                "15": "#540003",
+                "20": "#690005",
+                "25": "#7e0007",
+                "30": "#93000a",
+                "35": "#a80710",
+                "40": "#ba1a1a",
+                "50": "#de3730",
+                "60": "#ff5449",
+                "70": "#ff897d",
+                "80": "#ffb4ab",
+                "90": "#ffdad6",
+                "95": "#ffedea",
+                "98": "#fff8f7",
+                "99": "#fffbff",
+                "100": "#ffffff"
+              },
+              "neutral": {
+                "0": "#000000",
+                "5": "#101114",
+                "10": "#1a1b1e",
+                "15": "#252629",
+                "20": "#2f3033",
+                "25": "#3a3b3f",
+                "30": "#46474a",
+                "35": "#525256",
+                "40": "#5e5e62",
+                "50": "#77777a",
+                "60": "#909094",
+                "70": "#ababaf",
+                "80": "#c7c6ca",
+                "90": "#e3e2e6",
+                "95": "#f1f0f4",
+                "98": "#faf9fd",
+                "99": "#fdfbff",
+                "100": "#ffffff"
+              },
+              "neutralVariant": {
+                "0": "#000000",
+                "5": "#0e1117",
+                "10": "#181c22",
+                "15": "#23262d",
+                "20": "#2d3038",
+                "25": "#383b43",
+                "30": "#44474e",
+                "35": "#4f525a",
+                "40": "#5b5e66",
+                "50": "#74777f",
+                "60": "#8e9099",
+                "70": "#a8abb4",
+                "80": "#c4c6d0",
+                "90": "#e0e2ec",
+                "95": "#eef0fa",
+                "98": "#f9f9ff",
+                "99": "#fdfbff",
+                "100": "#ffffff"
+              }
+            },
+            "themeColors": {
+              "primaryColor": "",
+              "secondaryColor": "",
+              "backgroundColor": "",
+              "primaryTextColor": "",
+              "textColor": ""
+            },
+            "splashScreen": {
+              "storedData": {
+                "handle": "drive:/1Hfrc66YY3lgHmK6LwdiwBOC3mdUOsaje",
+                "mimeType": "image/png",
+                "contentLength": 1533812
+              }
+            }
+          },
+          "fd70fc76-ab33-45c7-bfc4-19d6d162adca": {
+            "template": "basic",
+            "templateAdditionalOptions": {},
+            "palette": {
+              "primary": {
+                "0": "#000000",
+                "5": "#001129",
+                "10": "#001b3c",
+                "15": "#00264e",
+                "20": "#003061",
+                "25": "#003b74",
+                "30": "#004689",
+                "35": "#0f5299",
+                "40": "#245fa6",
+                "50": "#4378c1",
+                "60": "#5f92dd",
+                "70": "#7aadfa",
+                "80": "#a7c8ff",
+                "90": "#d5e3ff",
+                "95": "#ecf1ff",
+                "98": "#f9f9ff",
+                "99": "#fdfbff",
+                "100": "#ffffff"
+              },
+              "secondary": {
+                "0": "#000000",
+                "5": "#071120",
+                "10": "#121c2b",
+                "15": "#1c2636",
+                "20": "#273141",
+                "25": "#323c4d",
+                "30": "#3d4758",
+                "35": "#495364",
+                "40": "#555f71",
+                "50": "#6e778a",
+                "60": "#8791a5",
+                "70": "#a2abc0",
+                "80": "#bdc7dc",
+                "90": "#d9e3f8",
+                "95": "#ecf1ff",
+                "98": "#f9f9ff",
+                "99": "#fdfbff",
+                "100": "#ffffff"
+              },
+              "tertiary": "",
+              "error": {
+                "0": "#000000",
+                "5": "#2d0001",
+                "10": "#410002",
+                "15": "#540003",
+                "20": "#690005",
+                "25": "#7e0007",
+                "30": "#93000a",
+                "35": "#a80710",
+                "40": "#ba1a1a",
+                "50": "#de3730",
+                "60": "#ff5449",
+                "70": "#ff897d",
+                "80": "#ffb4ab",
+                "90": "#ffdad6",
+                "95": "#ffedea",
+                "98": "#fff8f7",
+                "99": "#fffbff",
+                "100": "#ffffff"
+              },
+              "neutral": {
+                "0": "#000000",
+                "5": "#101114",
+                "10": "#1a1c1e",
+                "15": "#252629",
+                "20": "#2f3033",
+                "25": "#3a3b3e",
+                "30": "#46474a",
+                "35": "#525256",
+                "40": "#5e5e62",
+                "50": "#76777a",
+                "60": "#909094",
+                "70": "#ababaf",
+                "80": "#c7c6ca",
+                "90": "#e3e2e6",
+                "95": "#f1f0f4",
+                "98": "#faf9fd",
+                "99": "#fdfbff",
+                "100": "#ffffff"
+              },
+              "neutralVariant": {
+                "0": "#000000",
+                "5": "#0d1117",
+                "10": "#181c22",
+                "15": "#22262d",
+                "20": "#2d3038",
+                "25": "#383b43",
+                "30": "#43474e",
+                "35": "#4f525a",
+                "40": "#5b5e66",
+                "50": "#74777f",
+                "60": "#8e9199",
+                "70": "#a8abb4",
+                "80": "#c4c6cf",
+                "90": "#e0e2ec",
+                "95": "#eef0fa",
+                "98": "#f9f9ff",
+                "99": "#fdfbff",
+                "100": "#ffffff"
+              }
+            },
+            "themeColors": {
+              "primaryColor": "",
+              "secondaryColor": "",
+              "backgroundColor": "",
+              "primaryTextColor": "",
+              "textColor": ""
+            },
+            "splashScreen": {
+              "storedData": {
+                "handle": "drive:/1m15vOauUSNOGIzPKLQtxWUi-_qZipC35",
+                "mimeType": "image/png",
+                "contentLength": 1499292
+              }
+            }
+          }
+        },
+        "theme": "fd70fc76-ab33-45c7-bfc4-19d6d162adca"
+      }
+    },
+    "intent": "Build a single-step app that transforms any web code—from a basic project to a complex system—into a high-performance GitHub README.md.\n\nSolve two targets in one document:\n\nTechnical Maturity: Include a 'System Evolution & W3C Audit' section. It must identify 'Carbon Hotspots' and provide 3 specific technical steps to move the code toward 2026 web sustainability and performance standards.\n\nProfessional Branding: Write the entire README in a minimalist, 'Tech-Noir' editorial tone. Avoid generic filler. Use sophisticated, direct language that emphasizes the project's utility and logic.\n\nInclude a text input for the source code and a markdown output for the final README.",
+    "revision_intents": [
+      "@node2 dont use carbon hotspots",
+      "System Role: You are a Senior W3C Web Architect and a Tech-Noir Creative Director. Your task is to process the repository data provided by @Node_1 (the Crawler) and output a high-performance README.md.\n\nTarget 1: Technical Evolution \n\nProject Scale Analysis: Identify if this is a modular utility, a design system, or a full-scale application based on the file structure and dependencies.\n\nPerformance Audit: Evaluate the project against 2026 standards (specifically INP and LCP). Identify technical bottlenecks in the logic or the dependency tree found in package.json.\n\nThe Roadmap: Provide 3 specific architectural steps to move this project from its current state to a professional, production-grade system.\n\nTarget 2: Elite Branding \n\nTone: Write in a minimalist, Tech-Noir editorial style. Use sophisticated, direct language. No generic AI fluff. Focus on Logic, Efficiency, and Utility.\n\nStructure:\n\nThe Vision: A sharp, one-sentence pitch for the project’s existence.\n\nArchitecture: A deep-dive into how the components and logic flow (Main vs. Renderer if applicable, or Component-to-Store).\n\nStandardization: A checklist for W3C-aligned professional deployment.\n\nImplementation: Clean, direct CLI steps for setup.\n\nConstraints: Output must be Pure Markdown only. Use a \"Senior Developer-to-Developer\" communication style.",
+      "Update the Generate node to act as a Senior W3C Web Architect and Tech-Noir Creative Director.\n\nData Source: Instead of processing raw source code, it must analyze the provided repository link.\n\nTechnical Audit: Identify technical bottlenecks (specifically for 2026 performance standards like INP/LCP) and suggest 3 specific architectural evolution steps.\n\nElite Branding: Generate a professional GitHub README.md in a minimalist, 'Tech-Noir' editorial tone that focuses on project utility and logic.\n\nOutput: Ensure the final node renders pure Markdown."
+    ],
+    "raw_intent": "Build a single-step app that transforms any web code—from a basic project to a complex system—into a high-performance GitHub README.md.\n\nSolve two targets in one document:\n\nTechnical Maturity: Include a 'System Evolution & W3C Audit' section. It must identify 'Carbon Hotspots' and provide 3 specific technical steps to move the code toward 2026 web sustainability and performance standards.\n\nProfessional Branding: Write the entire README in a minimalist, 'Tech-Noir' editorial tone. Avoid generic filler. Use sophisticated, direct language that emphasizes the project's utility and logic.\n\nInclude a text input for the source code and a markdown output for the final README.",
+    "parameters": {}
+  },
+  "url": "drive:/1VrOxhvUYhcBaoe0FOh9B8CXBBeDjme01",
+  "assets": {},
+  "title": "README Architect",
+  "description": "Transform web code into high-performance, minimalist 'Tech-Noir' GitHub README.md.",
+  "version": "0.0.1",
+  "nodes": [
+    {
+      "id": "node_step_repository_content",
+      "metadata": {
+        "title": "Get Repository Content",
+        "visual": {
+          "x": 700,
+          "y": 350,
+          "collapsed": "expanded",
+          "outputHeight": 88
+        },
+        "step_intent": "Retrieve the full content of the provided GitHub repository link to analyze its technical architecture and project logic.",
+        "tags": [
+          "appcat_get_webpage"
+        ]
+      },
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Objective: Retrieve the full content of the GitHub repository provided in the user input. Analyze the repository codebase, documentation, and file structure to provide a comprehensive explanation of its technical architecture and project logic.\n\nOutput Format: Provide a detailed technical analysis including the technology stack used, a summary of the directory structure, the interaction between key components, and a breakdown of the core project logic.\n\nUser Input / Context: {{\"type\":\"in\",\"path\":\"ask_user_repository_link\",\"title\":\"Repository Link\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "node_step_readme_markdown",
+      "metadata": {
+        "title": "Generate Readme Markdown",
+        "visual": {
+          "x": 1050,
+          "y": 350,
+          "collapsed": "expanded",
+          "outputHeight": 88
+        },
+        "step_intent": "Act as a Senior W3C Web Architect and Tech-Noir Creative Director. Use google_search to identify 2026 performance standards (specifically INP/LCP). Analyze the repository_content to identify technical bottlenecks and suggest 3 specific architectural evolution steps. Generate an elite, professional GitHub README.md in a minimalist, 'Tech-Noir' editorial tone focusing on utility and logic. The google_search tool should be used internally by the text_generation_agent for research."
+      },
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Objective: Act as a Senior W3C Web Architect and Tech-Noir Creative Director. Use text generation with search grounding to identify projected 2026 web performance standards, specifically regarding Interaction to Next Paint (INP) and Largest Contentful Paint (LCP). Analyze the provided repository content to identify technical bottlenecks. Define three specific architectural evolution steps to prepare the codebase for these future standards. Generate a professional GitHub README.md for the repository link provided, using a minimalist Tech-Noir editorial tone that emphasizes utility and logic.\n\nOutput Format: Provide the generated README.md content as plain text. Ensure the architectural evolution steps are integrated into the technical section of the document. Confirm the task is complete using system_objective_fulfilled.\n\nUser Input / Context:\nRepository Link: {{\"type\":\"in\",\"path\":\"ask_user_repository_link\",\"title\":\"Repository Link\"}}\nRepository Content: {{\"type\":\"in\",\"path\":\"node_step_repository_content\",\"title\":\"Get Repository Content\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "node_step_readme_webpage",
+      "metadata": {
+        "title": "Render Github Readme Webpage",
+        "visual": {
+          "x": 1400,
+          "y": 350,
+          "collapsed": "expanded",
+          "outputHeight": 88
+        },
+        "step_intent": "Render the generated README content as a pure Markdown document within a minimalist, professional GitHub README webpage. The webpage should incorporate the generated markdown content."
+      },
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "Generate an HTML webpage that renders Markdown content in a minimalist, professional GitHub README style, infused with a 'Tech-Noir' aesthetic.\n\n**Layout Organization:**\nThe webpage should feature a clean, single-column layout centered on the screen, mimicking the structure of a standard GitHub README. The main content area, containing the rendered Markdown, should have a maximum width for optimal readability on larger screens, while remaining fluid and responsive on smaller devices. There should be generous vertical spacing between major sections (headers, paragraphs, code blocks) to enhance readability. The page should not have a traditional header or footer, focusing solely on presenting the README content.\n\n**Style Design Language:**\nThe visual design approach is \"minimalist, professional GitHub README\" combined with a \"Tech-Noir\" editorial tone. This means a sophisticated, utility-focused, and slightly dark aesthetic.\n\n*   **Color Scheme:** A primary dark background (e.g., deep charcoal or near-black) with contrasting light-colored text (e.g., off-white, light gray) for high readability. Accent colors should be subtle but sharp, such as an electric blue or muted teal for links, code highlights, or subtle borders, embodying the 'Tech-Noir' feel without being distracting.\n*   **Typography Style:** Clean and highly readable. For body text and headings, use a modern sans-serif font (e.g., 'Inter', 'Roboto', 'Open Sans') to maintain a professional and minimalist look. For code blocks and inline code, use a monospaced font (e.g., 'Fira Code', 'JetBrains Mono', 'Source Code Pro') to convey technical precision. Font sizes should be scalable and legible across devices, with clear hierarchy for headings.\n*   **Spacing and Layout Principles:** Generous and consistent whitespace is crucial for a minimalist aesthetic, ensuring content breathes and is not overwhelming. Margins and padding should be meticulously applied to create visual balance and structure, emphasizing clarity and organization.\n*   **Aesthetic Goal:** Elite, professional, minimalist, Tech-Noir, utility, and logic-focused. The design should feel intelligent, functional, and sleek.\n\n**Component Guidelines:**\nThe primary component is the rendering of Markdown content.\n\n*   **Markdown Rendering:** The provided Markdown content must be parsed and rendered into appropriate HTML elements (e.g., `<h1>`-`<h6>`, `<p>`, `<ul>`, `<ol>`, `<li>`, `<code>`, `<pre>`, `<a>`).\n*   **Headings:** Headings (`<h1>` to `<h6>`) should be clearly distinguished by size and weight, establishing a strong content hierarchy. They should have ample bottom margin.\n*   **Paragraphs:** Standard paragraphs with good line-height for readability.\n*   **Lists:** Unordered and ordered lists should be well-indented and easy to scan.\n*   **Code Blocks:** Code blocks (`<pre><code>`) should have a distinct background (slightly lighter or darker than the main background, but still dark-themed) and a monospaced font. They should include padding and subtle borders. Inline code should also be distinguishable (e.g., slightly different background or font color).\n*   **Links:** Links should be clearly styled with the accent color and have a subtle hover effect (e.g., underline, slight color shift) to indicate interactivity.\n\n**Responsive Design:**\nThe webpage must be fully responsive, adopting a mobile-first approach. Content should reflow gracefully, typography should scale, and layout should adapt to ensure an optimal viewing experience on all screen sizes, from mobile phones to large desktop displays.\n\ngenerate_readme_markdown: {{\"type\":\"in\",\"path\":\"node_step_readme_markdown\",\"title\":\"Generate Readme Markdown\"}}\n\nrepository_link: {{\"type\":\"in\",\"path\":\"ask_user_repository_link\",\"title\":\"Repository Link\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "b-system-instruction": {
+          "parts": [
+            {
+              "text": "You are an AI Web Developer. Your task is to generate a single, self-contained HTML document for rendering in an iframe, based on user instructions and data.\n\n**Visual aesthetic:**\n    * Aesthetics are crucial. Make the page look amazing, especially on mobile.\n    * Respect any instructions on style, color palette, or reference examples provided by the user.\n    * **CRITICAL: Aim for premium, state-of-the-art designs. Avoid simple minimum viable products.**\n    * **Use Rich Aesthetics**: The USER should be wowed at first glance by the design. Use best practices in modern web design (e.g. vibrant colors, dark modes, glassmorphism, and dynamic animations) to create a stunning first impression. Failure to do this is UNACCEPTABLE.\n    * **Prioritize Visual Excellence**: Implement designs that will WOW the user and feel extremely premium:\n        - Avoid generic colors (plain red, blue, green). Use curated, harmonious color palettes (e.g., HSL tailored colors, sleek dark modes).\n        - Using modern typography (e.g., from Google Fonts like Inter, Roboto, or Outfit) instead of browser defaults.\n        - Use smooth gradients.\n        - Add subtle micro-animations for enhanced user experience.\n    * **Use a Dynamic Design**: An interface that feels responsive and alive encourages interaction. Achieve this with hover effects and interactive elements. Micro-animations, in particular, are highly effective for improving user engagement.\n    * **Thematic Specificity**: Do not just create a generic layout. Define a clear \"vibe\" or theme based on the content. Use specific aesthetic keywords (e.g., \"Glassmorphism\", \"Neobrutalism\", \"Minimalist\", \"Comic Book Style\") to guide the design.\n    * **Typography Hierarchy**: Explicitly import and use font pairings. Use a distinct Display Font for headers and a highly readable Body Font for text.\n    * **Readability**: Pay extra attention to readability. Ensure the text is always readable with sufficient contrast against the background. Choose fonts and colors that enhance legibility.\n\n**Design and Functionality:**\n    * **Component-Based Design**: Do not just dump text into blocks. Semanticize the content into distinct UI components.\n    * **Layout Dynamics**: Break the grid. Avoid strict, identical grid columns. Use asymmetrical layouts, Bento grids, or responsive flexbox layouts where some elements span full width to create visual interest and emphasize key content.\n    * **Tailwind Configuration**: Extend the Tailwind configuration within a `<script>` block to define custom font families and color palettes that match the theme.\n    * Thoroughly analyze the user's instructions to determine the desired type of webpage, application, or visualization. What are the key features, layouts, or functionality?\n    * Analyze any provided data to identify the most compelling layout or visualization of it. For example, if the user requests a visualization, select an appropriate chart type (bar, line, pie, scatter, etc.) to create the most insightful and visually compelling representation. Or if user instructions say `use a carousel format`, you should consider how to break the content and any media into different card components to display within the carousel.\n    * If requirements are underspecified, make reasonable assumptions to complete the design and functionality. Your goal is to deliver a working product with no placeholder content.\n    * Ensure the generated code is valid and functional. Return only the code, and open the HTML codeblock with the literal string \"```html\".\n    * The output must be a complete and valid HTML document with no placeholder content for the developer to fill in.\n\n**Libraries:**\n  Unless otherwise specified, use:\n    * Tailwind for CSS\n    * **CRITICAL: Use the Tailwind CDN from `https://cdn.tailwindcss.com`. Do NOT use `tailwind.min.css` or any other local Tailwind file. Always include Tailwind using: `<script src=\"https://cdn.tailwindcss.com\"></script>`**\n\n**Constraints:**\n  * **External Links:** You ARE allowed to generate external links (`<a href=\"...\">` and `window.open(...)`) to external websites (e.g. google.com, wikipedia.org) for user navigation.\n  * **NO External Embeds:** Do NOT embed any external resources (e.g. `<script src=\"...\">`, `<img src=\"...\">`, `<iframe src=\"...\">`, `<link href=\"...\">`) from external URLs. Content Security Policy (CSP) will block them.\n  * **Media Restriction:** ONLY use media URLs that are explicitly passed in the input. Do NOT generate or hallucinate any other media URLs (e.g. from placeholder sites or external CDNs).\n  * **Render All Media:** You MUST render ALL media (images, videos, audio) that are passed in. Do NOT skip or omit any provided media items. Every passed-in media URL must appear in the final HTML output.\n  * **Navigation Restriction:** Do NOT generate unneeded fake links or buttons to sub-pages (e.g. \"About\", \"Contact\", \"Learn More\") unless explicitly requested. Stick to the plan and the provided content.\n  * **Footer Restriction:** **NEVER** generate any footer content, including legal footers like \"All rights reserved\" or \"Copyright 2024\". [It is a violation of Google's policies to hallucinate legal footers.]\n"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Auto",
+        "b-render-model-name": "gemini-flash"
+      }
+    },
+    {
+      "id": "ask_user_repository_link",
+      "metadata": {
+        "title": "Repository Link",
+        "visual": {
+          "x": 250,
+          "y": 300,
+          "collapsed": "expanded",
+          "outputHeight": 88
+        }
+      },
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "configuration": {
+        "description": {
+          "parts": [
+            {
+              "text": "Provide your GitHub repository link"
+            }
+          ],
+          "role": "user"
+        },
+        "p-modality": "Any"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "ask_user_repository_link",
+      "to": "node_step_repository_content",
+      "out": "context",
+      "in": "p-z-ask_user_repository_link"
+    },
+    {
+      "from": "ask_user_repository_link",
+      "to": "node_step_readme_markdown",
+      "out": "context",
+      "in": "p-z-ask_user_repository_link"
+    },
+    {
+      "from": "ask_user_repository_link",
+      "to": "node_step_readme_webpage",
+      "out": "context",
+      "in": "p-z-ask_user_repository_link"
+    },
+    {
+      "from": "node_step_repository_content",
+      "to": "node_step_readme_markdown",
+      "out": "context",
+      "in": "p-z-node_step_repository_content"
+    },
+    {
+      "from": "node_step_readme_markdown",
+      "to": "node_step_readme_webpage",
+      "out": "context",
+      "in": "p-z-node_step_readme_markdown"
+    }
+  ]
+}
